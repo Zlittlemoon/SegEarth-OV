@@ -1,0 +1,37 @@
+/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/utils/cpp_extension.py:28: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging  # type: ignore[attr-defined]
+/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+running build_ext
+/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/utils/cpp_extension.py:502: UserWarning: Attempted to use ninja as the BuildExtension backend but we could not find ninja.. Falling back to using the slow distutils backend.
+  warnings.warn(msg.format('we could not find ninja.'))
+/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/utils/cpp_extension.py:414: UserWarning: The detected CUDA version (12.4) has a minor version mismatch with the version that was used to compile PyTorch (12.1). Most likely this shouldn't be a problem.
+  warnings.warn(CUDA_MISMATCH_WARN.format(cuda_str_version, torch.version.cuda))
+/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/utils/cpp_extension.py:424: UserWarning: There are no /home/108/u108008/miniconda3/envs/segearth-ov/bin/x86_64-conda-linux-gnu-c++ version bounds defined for CUDA version 12.4
+  warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+building 'adaptive_conv_cuda_impl' extension
+creating build/temp.linux-x86_64-cpython-39/featup/adaptive_conv_cuda
+/home/108/u108008/miniconda3/envs/segearth-ov/bin/x86_64-conda-linux-gnu-c++ -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/108/u108008/miniconda3/envs/segearth-ov/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/108/u108008/miniconda3/envs/segearth-ov/include -fPIC -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/TH -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/THC -I/home/108/u108008/miniconda3/envs/segearth-ov/include -I/home/108/u108008/miniconda3/envs/segearth-ov/include/python3.9 -c featup/adaptive_conv_cuda/adaptive_conv_cuda.cpp -o build/temp.linux-x86_64-cpython-39/featup/adaptive_conv_cuda/adaptive_conv_cuda.o -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -DTORCH_EXTENSION_NAME=adaptive_conv_cuda_impl -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+/home/108/u108008/miniconda3/envs/segearth-ov/bin/nvcc -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/TH -I/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/THC -I/home/108/u108008/miniconda3/envs/segearth-ov/include -I/home/108/u108008/miniconda3/envs/segearth-ov/include/python3.9 -c featup/adaptive_conv_cuda/adaptive_conv_kernel.cu -o build/temp.linux-x86_64-cpython-39/featup/adaptive_conv_cuda/adaptive_conv_kernel.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options '-fPIC' -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -DTORCH_EXTENSION_NAME=adaptive_conv_cuda_impl -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_80,code=sm_80 -ccbin /home/108/u108008/miniconda3/envs/segearth-ov/bin/x86_64-conda-linux-gnu-cc -std=c++17
+In file included from /home/108/u108008/miniconda3/envs/segearth-ov/include/cuda_runtime.h:82,
+                 from <command-line>:
+/home/108/u108008/miniconda3/envs/segearth-ov/include/crt/host_config.h:143:2: error: #error -- unsupported GNU version! gcc versions later than 13 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  143 | #error -- unsupported GNU version! gcc versions later than 13 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from featup/adaptive_conv_cuda/adaptive_conv_kernel.cu:4:
+/home/108/u108008/miniconda3/envs/segearth-ov/lib/python3.9/site-packages/torch/include/ATen/cuda/CUDAContext.h:6:10: fatal error: cusparse.h: No such file or directory
+    6 | #include <cusparse.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+error: command '/home/108/u108008/miniconda3/envs/segearth-ov/bin/nvcc' failed with exit code 1
